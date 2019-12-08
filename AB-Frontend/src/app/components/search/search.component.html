@@ -1,0 +1,28 @@
+
+<div>
+<div *ngIf="flightList">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+            <th>Flight Number</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Seats Left</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let flight of flightList">
+            <td>{{ flight.acNumber }}</td>
+            <td>{{ flight.acFromDateTime}}</td>
+            <td>{{ flight.acToDateTime}}</td>
+            <td>{{ flight.acCapacity}}</td>
+            
+            <button class="submit-btn"  (click)="bookFlight(flight)">Book</button>
+          </tr>
+        </tbody>
+   </table> 
+</div>
+
+      
+</div>
