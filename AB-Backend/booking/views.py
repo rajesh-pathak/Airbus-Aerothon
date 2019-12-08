@@ -4,6 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 import mysql.connector
+from pprint import pprint
 
 
 def home(request):
@@ -13,7 +14,8 @@ def home(request):
 
 @api_view(['GET','POST'])
 def search_flights(request):
-    req_data = req_data['data']
+    pprint(request.META)
+    req_data = request['data']
     bookingDate = req_data['bookingDate']
     departure = req_data['from']
     arrival = req_data['to']
