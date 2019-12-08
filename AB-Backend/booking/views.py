@@ -14,14 +14,14 @@ def home(request):
 
 @api_view(['GET','POST'])
 def search_flights(request):
-    pprint(request.META)
-    req_data = request['data']
-    bookingDate = req_data['bookingDate']
-    departure = req_data['from']
-    arrival = req_data['to']
-    seats = req_data['numSeats']
-    travelClass = req_data['travelClass']
-    print(bookingDate)
+    pprint(request.POST)
+    # req_data = request['data']
+    # bookingDate = req_data['bookingDate']
+    # departure = req_data['from']
+    # arrival = req_data['to']
+    # seats = req_data['numSeats']
+    # travelClass = req_data['travelClass']
+    # print(bookingDate)
 
     return HttpResponse()
 
